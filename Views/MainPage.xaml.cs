@@ -44,7 +44,7 @@ namespace PowerGenerationLocationChecker
 
         private async void TapGestureGenerate_Tapped(object sender, TappedEventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(Views.MapPage));
+            await Shell.Current.GoToAsync(nameof(Views.ResultsPage));
         }
     }
 
