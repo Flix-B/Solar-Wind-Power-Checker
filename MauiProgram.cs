@@ -1,9 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PowerGenerationLocationChecker
 {
-    public static class MauiProgram
+    public class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
@@ -18,10 +23,12 @@ namespace PowerGenerationLocationChecker
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
+
         }
     }
 }
+

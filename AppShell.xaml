@@ -4,13 +4,29 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PowerGenerationLocationChecker"
-    Title=" "
+    xmlns:views="clr-namespace:PowerGenerationLocationChecker.Views"
+    Title="{DynamicResource ApplicationTitle}"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:StartPage}"
+        ContentTemplate="{DataTemplate local:MainPage}"
         Route="StartPage" />
+
+    <ShellContent
+        Title="Map"
+        ContentTemplate="{DataTemplate views:MapPage}"
+        Route="MapPage" />
+
+    <ShellContent
+        Title="Results"
+        ContentTemplate="{DataTemplate views:ResultsPage}"
+        Route="ResultsPage" />
+
+    <ShellContent
+        Title="Suppliers"
+        ContentTemplate="{DataTemplate views:SuppliersPage}"
+        Route="SuppliersPage" />
 
 </Shell>

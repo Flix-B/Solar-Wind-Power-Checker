@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using PowerGenerationLocationChecker.LocationsViewModel;
 
 namespace PowerGenerationLocationChecker
 {

@@ -1,0 +1,23 @@
+{
+  "Locations": [
+
+    {
+      "Address": "Maplehurst Road",
+      "City": "West Grinstead",
+      "County": "Horsham",
+      "Postcode": "RH13 6RN"
+    },
+    {
+      "Address": "123 Example Road",
+      "City": "Example-on-sea",
+      "County": "Exampleton",
+      "Postcode": "TF3 9EY"
+    },
+    {
+      "Address": "123 Example street",
+      "City": "Example-on-sea",
+      "County": "Exampleton",
+      "Postcode": "RW2 7UG"
+    }
+  ]
+}

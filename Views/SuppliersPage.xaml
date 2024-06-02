@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PowerGenerationLocationChecker.Views.SuppliersPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{DynamicResource ApplicationTitle}">
+
+    <Grid RowSpacing="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="114*" />
+            <RowDefinition Height="236*" />
+            <RowDefinition Height="312*" />
+            <RowDefinition Height="138*" />
+            <RowDefinition Height="48.3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83.7*" />
+            <ColumnDefinition Width="833*" />
+            <ColumnDefinition Width="83.7*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            Aspect="Fill"
+            Source="banner.png" />
+
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="#25B4E8"
+            HorizontalOptions="Center"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 10,10,25,25"
+            StrokeThickness="1">
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="1"
+                Orientation="Vertical">
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Stroke="#828282"
+                    StrokeShape="RoundRectangle 5,5,0,0"
+                    StrokeThickness="1">
+                    <Label
+                        Padding="2.5"
+                        BackgroundColor="#F9DC5C"
+                        FontFamily="RedHatText-Regular"
+                        FontSize="Header"
+                        Text="Location:" />
+                </Border>
+
+
+                <StackLayout Padding="1,5" Orientation="Horizontal">
+
+                    <AbsoluteLayout>
+
+                        <Border
+                            Margin="3"
+                            Padding="16,8"
+                            BackgroundColor="#AF2BBF"
+                            HorizontalOptions="Center"
+                            Stroke="#828282"
+                            StrokeShape="RoundRectangle 25,25,25,25"
+                            StrokeThickness="2"
+                            VerticalOptions="Center">
+
+                            <StackLayout
+                                HeightRequest="111"
+                                Orientation="Vertical"
+                                WidthRequest="95">
+                                <Image
+                                    Margin="-8"
+                                    ClassId="usecurrentlocation"
+                                    HeightRequest="105"
+                                    Source="CurrentLocwhite.png"
+                                    WidthRequest="35" />
+
+                                <Label
+                                    Margin="-28"
+                                    Padding="2"
+                                    BackgroundColor="Transparent"
+                                    FontAutoScalingEnabled="True"
+                                    HeightRequest="60"
+                                    Text="Use Current Location"
+                                    TextColor="White"
+                                    WidthRequest="85" />
+                            </StackLayout>
+
+                        </Border>
+
+
+                    </AbsoluteLayout>
+
+                    <StackLayout
+                        Margin="10,1"
+                        BackgroundColor="#FFFCF7"
+                        MinimumWidthRequest="160"
+                        Orientation="Vertical">
+                        <Border Stroke="#828282" StrokeThickness="1">
+                            <Entry
+                                x:Name="addressEntry"
+                                FontFamily="RedHatText-Regular"
+                                FontSize="14"
+                                HeightRequest="35"
+                                Placeholder="Address"
+                                PlaceholderColor="DarkSlateGrey" />
+                        </Border>
+                        <Border Stroke="#828282" StrokeThickness="1">
+                            <Entry
+                                x:Name="cityEntry"
+                                HeightRequest="35"
+                                Placeholder="City"
+                                PlaceholderColor="DarkSlateGrey" />
+                        </Border>
+                        <Border Stroke="#828282" StrokeThickness="1">
+                            <Entry
+                                x:Name="countyEntry"
+                                HeightRequest="35"
+                                Placeholder="County"
+                                PlaceholderColor="DarkSlateGrey" />
+                        </Border>
+                        <Border Stroke="#828282" StrokeThickness="1">
+                            <Entry
+                                x:Name="postcodeEntry"
+                                HeightRequest="35"
+                                Placeholder="Postcode"
+                                PlaceholderColor="DarkSlateGrey" />
+                        </Border>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </Border>
+
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#25B4E8"
+            HorizontalOptions="Center"
+            MinimumWidthRequest="325"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 10,10,25,25"
+            StrokeThickness="1">
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                Orientation="Vertical">
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Stroke="#828282"
+                    StrokeShape="RoundRectangle 5,5,0,0"
+                    StrokeThickness="1">
+
+                    <Label
+                        Padding="2.5"
+                        BackgroundColor="#F9DC5C"
+                        Text="Previous locations" />
+                </Border>
+
+                <Border
+                    BackgroundColor="#AF2BBF"
+                    Stroke="#828282"
+                    StrokeThickness="2">
+
+
+                    <StackLayout
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+
+                        <Button
+                            BackgroundColor="Transparent"
+                            FontFamily="RedHatText-Regular"
+                            HorizontalOptions="Center"
+                            Text="123 Example road,  TF3 9EY "
+                            TextColor="#FFFCF7"
+                            VerticalOptions="Center"
+                            WidthRequest="225" />
+                        <ImageButton
+                            HeightRequest="30"
+                            Source="locationiconwhite.png"
+                            WidthRequest="140" />
+
+                    </StackLayout>
+                </Border>
+
+                <Border
+                    BackgroundColor="#AF2BBF"
+                    Stroke="#828282"
+                    StrokeThickness="2">
+                    <StackLayout
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+
+                        <!--<CollectionView.ItemsSource/>-->
+                        <Button
+                            BackgroundColor="#AF2BBF"
+                            FontFamily="RedHatText-Regular"
+                            HorizontalOptions="Center"
+                            Text="132 Example Street,  RW2 7UG  "
+                            TextColor="#FFFCF7"
+                            VerticalOptions="Center"
+                            WidthRequest="225" />
+
+                        <ImageButton
+                            HeightRequest="30"
+                            Source="locationiconwhite.png"
+                            WidthRequest="140" />
+
+                    </StackLayout>
+
+                </Border>
+
+            </StackLayout>
+        </Border>
+
+        <Border
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="#AF2BBF"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 12,12,12,12"
+            StrokeThickness="2">
+            <StackLayout
+                Grid.Row="3"
+                Grid.Column="1"
+                BackgroundColor="#AF2BBF"
+                Orientation="Horizontal">
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    BackgroundColor="#AF2BBF"
+                    ClassId="generatedata"
+                    FontFamily="RedHatText-Regular"
+                    FontSize="Medium"
+                    Text="Generate Data"
+                    WidthRequest="250" />
+                <ImageButton
+                    Margin="-30"
+                    ClassId="generatedata"
+                    Source="whitegenerateicon.png"
+                    WidthRequest="50" />
+            </StackLayout>
+        </Border>
+        <Border
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            BackgroundColor="#0A4D7E"
+            Stroke="Black"
+            StrokeThickness="1">
+            <StackLayout
+                Grid.Row="4"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="112">
+                <ImageButton Source="whitebackicon.png" WidthRequest="30" />
+                <ImageButton Source="whitehomeicon2.png" WidthRequest="28" Clicked="HomeButton_Clicked" />
+                <ImageButton Source="whiteinfoicon.png" WidthRequest="30" Clicked="InfoButton_Clicked" />
+            </StackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

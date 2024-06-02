@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PowerGenerationLocationChecker.Views.MapPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{DynamicResource ApplicationTitle}">
+
+    <Grid RowSpacing="30" BackgroundColor="#25B4E8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="114*" />
+            <RowDefinition Height="512*" />
+            <RowDefinition Height="83*" />
+            <RowDefinition Height="48.3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83.7*" />
+            <ColumnDefinition Width="833*" />
+            <ColumnDefinition Width="83.7*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            Aspect="Fill"
+            Source="banner.png" />
+
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="White"
+            HorizontalOptions="Fill"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 25,25,25,25"
+            StrokeThickness="2">
+
+            <Label HorizontalOptions="Center" Text="Map Placeholder" />
+        </Border>
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#25B4E8"
+            HorizontalOptions="Center"
+            MinimumWidthRequest="325"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 10,10,25,25"
+            StrokeThickness="1" />
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="#AF2BBF"
+            Stroke="#828282"
+            StrokeShape="RoundRectangle 12,12,12,12"
+            StrokeThickness="2">
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="#AF2BBF"
+                Orientation="Horizontal">
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="#AF2BBF"
+                    ClassId="generatedata"
+                    FontFamily="RedHatText-Regular"
+                    FontSize="Medium"
+                    Text="Generate Data"
+                    WidthRequest="250" />
+                <ImageButton
+                    Margin="-30"
+                    ClassId="generatedata"
+                    Source="whitegenerateicon.png"
+                    WidthRequest="50" />
+            </StackLayout>
+        </Border>
+        <Border
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            BackgroundColor="#0A4D7E"
+            Stroke="Black"
+            StrokeThickness="1">
+            <StackLayout
+                Grid.Row="4"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="112">
+                <ImageButton Source="whitebackicon.png" WidthRequest="30" />
+                <ImageButton Source="whitehomeicon2.png" WidthRequest="28" />
+                <ImageButton Source="whiteinfoicon.png" WidthRequest="30" />
+            </StackLayout>
+        </Border>
+    </Grid>
+</ContentPage>
